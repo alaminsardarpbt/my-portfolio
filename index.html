@@ -166,14 +166,21 @@
   <section id="contact" class="py-5">
     <div class="container text-center">
       <h2 class="fw-bold mb-4" data-aos="fade-up">Contact Me</h2>
-
-      <form class="mx-auto" style="max-width: 550px;" data-aos="fade-up" data-aos-delay="150">
-        <input type="text" class="form-control mb-3" placeholder="Your name">
-        <input type="email" class="form-control mb-3" placeholder="Your email">
-        <textarea class="form-control mb-3" rows="4" placeholder="Your message"></textarea>
-        <button class="btn btn-primary px-4">Send Message</button>
+      <form action="https://api.web3forms.com/submit" method="POST" class="mx-auto" style="max-width: 550px;"
+        data-aos="fade-up" data-aos-delay="150">
+        <!-- Web3Forms Access Key -->
+        <input type="hidden" name="access_key" value="721948ba-d788-43e2-b5e8-2412c9a86b58">
+        <!-- Name -->
+        <input type="text" name="name" class="form-control mb-3" placeholder="Your name" required>
+        <!-- Email -->
+        <input type="email" name="email" class="form-control mb-3" placeholder="Your email" required>
+        <!-- Message -->
+        <textarea name="message" class="form-control mb-3" rows="4" placeholder="Your message" required></textarea>
+        <!-- Optional: Subject -->
+        <input type="hidden" name="subject" value="New Contact Form Message">
+        <!-- Submit -->
+        <button type="submit" class="btn btn-primary px-4">Send Message</button>
       </form>
-
     </div>
   </section>
 
@@ -203,4 +210,5 @@
 
 
 </html>
+
 
